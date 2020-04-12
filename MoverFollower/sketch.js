@@ -1,3 +1,9 @@
+/*
+* Click and draw lines to follow.
+* TODO: get mover to follow line
+*
+*/
+
 class Mover {
   constructor(x, y) {
     this.pos = createVector(x, y);
@@ -39,9 +45,14 @@ function draw() {
   background(0);
   ellipse(mouseX, mouseY, 8);
   if (mouseIsPressed === true) {
-    line(mouseX, mouseY, pmouseX, pmouseY);
-  }
+    path.push([mouseX, mouseY, pmouseX, pmouseY]);
 
+  }
+  for (let ii = 0; ii < path.length; ii++) {
+    line(path[ii][0], path[ii][1], path[ii][2], path[ii][3]);
+    ellipse(path[ii][0], path[ii][1], 8);
+
+  }
   mover.update();
   mover.show();
 
