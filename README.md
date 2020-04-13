@@ -1,6 +1,13 @@
 # RC Car PID Simulation
 RC Car PID Simulation in processing and test Arduino code for steering.
 
+## Value in doing this:
+ * Simple model to bridge real world data with simulation data
+ * Data for robust machine learning 
+ * Visualtionat of problems for easier on boarding and adoption of project
+ * Better virtual controls for real world devices
+
+## Action items
 - [ ] P5js script that create drive patterns and steers a virtual vehicle around that path using vector math.
 - [ ] Create a steering system using the values from IMU and typical RC Car controls
 - [ ] Setup a test figure out
